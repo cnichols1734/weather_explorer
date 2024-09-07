@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 from streamlit import header
 
-st.header ("WeatherView")
+st.title ("WeatherView")
 # Add a file uploader to load the CSV file
 uploaded_file = st.file_uploader("Upload a CSV file", type="csv")
 
@@ -35,7 +35,6 @@ if uploaded_file is not None:
             filtered_data = weather_data[(weather_data['city_name'].isin(cities)) & (weather_data['timestamp'] >= time_range[0]) & (weather_data['timestamp'] <= time_range[1])]
 
             # Header for app
-            st.title("Chris' Weather Data Explorer")
             st.header("Explore Weather Data by City")
 
             # Temperature Line Chart
