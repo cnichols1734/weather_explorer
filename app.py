@@ -1,7 +1,9 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+from streamlit import header
 
+st.header ("WeatherView")
 # Add a file uploader to load the CSV file
 uploaded_file = st.file_uploader("Upload a CSV file", type="csv")
 
